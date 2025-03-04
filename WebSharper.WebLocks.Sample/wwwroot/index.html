@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Locks API Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Content/WebSharper.WebLocks.Sample.css" />
+    <style>
+        /* Don't show the not-yet-loaded templates */
+        [ws-template], [ws-children-template] { display: none; }
+    </style>
+    <script type="module" src="Content/WebSharper.WebLocks.Sample.head.js"></script>
+</head>
+<body>
+    <h1>Web Locks API Example</h1>
+    <div id="main" ws-children-template="Main">
+        <button ws-onclick="AcquireLock">Acquire Lock</button>
+        <p ws-replace="Status"></p>
+    </div>
+    <script type="module" src="Content/WebSharper.WebLocks.Sample.min.js"></script>
+</body>
+</html>
