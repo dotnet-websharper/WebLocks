@@ -9,16 +9,16 @@ module Definition =
     let Lock =
         Class "Lock"
         |+> Instance [
-            "mode" =? T<string> // Read-only: "exclusive" (default) or "shared"
-            "name" =? T<string> // Read-only: Name of the lock
+            "mode" =? T<string> 
+            "name" =? T<string> 
         ]
 
     let LockInfo =
         Pattern.Config "LockInfo" {
             Required = []
             Optional = [
-                "name", T<string> // Name of the lock
-                "mode", T<string> // "exclusive" or "shared"
+                "name", T<string> 
+                "mode", T<string> 
                 "clientId", T<string>
             ]
         }
@@ -26,8 +26,8 @@ module Definition =
     let LockManagerQueryResult =
         Pattern.Config "LockManagerQueryResult" {
             Required = [
-                "held", !| LockInfo // List of held locks
-                "pending", !| LockInfo // List of pending locks
+                "held", !| LockInfo 
+                "pending", !| LockInfo 
             ]
             Optional = []
         }
@@ -36,10 +36,10 @@ module Definition =
         Pattern.Config "LockRequestOptions" {
             Required = []
             Optional = [
-                "mode", T<string> // "exclusive" (default) or "shared"
-                "ifAvailable", T<bool> // If true, grants the lock only if available
-                "steal", T<bool> // If true, releases existing locks and grants this one
-                "signal", T<Dom.AbortSignal> // AbortSignal to cancel the request if needed (requires separate binding)
+                "mode", T<string> 
+                "ifAvailable", T<bool> 
+                "steal", T<bool> 
+                "signal", T<Dom.AbortSignal> 
             ]
         }
 
@@ -50,27 +50,13 @@ module Definition =
         Class "LockManager"
         |+> Instance [
             "request" => T<string>?name * !?LockRequestOptions?options * callbackFunc?callback ^-> T<Promise<unit>> 
-            // Requests a lock with name and optional mode, and executes the callback
-            "query" => T<unit> ^-> T<Promise<_>>[LockManagerQueryResult] // Retrieves information about held and pending locks
-        ]
-
-    let Navigator = 
-        Class "Navigator" 
-        |+> Instance [
-            "locks" =? LockManager
-        ]
-
-    let WorkerNavigator = 
-        Class "WorkerNavigator" 
-        |+> Instance [
-            "locks" =? LockManager
+            
+            "query" => T<unit> ^-> T<Promise<_>>[LockManagerQueryResult] 
         ]
 
     let Assembly =
         Assembly [
             Namespace "WebSharper.WebLocks" [
-                WorkerNavigator
-                Navigator
                 LockManager
                 LockRequestOptions
                 LockManagerQueryResult

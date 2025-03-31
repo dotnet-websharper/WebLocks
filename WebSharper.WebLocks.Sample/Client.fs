@@ -17,7 +17,7 @@ module Client =
 
     let acquireLock () =
         promise {
-            let locks = As<Navigator>(JS.Window.Navigator).Locks
+            let locks = JS.Window.Navigator.Locks
             do! locks.Request("my-lock", fun _ ->
                 promise {
                     statusMessage.Value <- "Lock acquired!"

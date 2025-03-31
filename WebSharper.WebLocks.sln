@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WebSharper.WebLocks", "WebSharper.WebLocks\WebSharper.WebLocks.fsproj", "{B301CD3F-4FAA-4560-A58D-AF3BD751DE5E}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WebSharper.WebLocks.Sample", "WebSharper.WebLocks.Sample\WebSharper.WebLocks.Sample.fsproj", "{BDA0CA3C-E4A3-42F2-B7B6-BC19EA138F4F}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WebSharper.WebLocks.Extensions", "WebSharper.WebLocks.Extensions\WebSharper.WebLocks.Extensions.fsproj", "{0095BB80-EDD2-4DEC-BD77-35BEB5BBEC0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BDA0CA3C-E4A3-42F2-B7B6-BC19EA138F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDA0CA3C-E4A3-42F2-B7B6-BC19EA138F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDA0CA3C-E4A3-42F2-B7B6-BC19EA138F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0095BB80-EDD2-4DEC-BD77-35BEB5BBEC0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0095BB80-EDD2-4DEC-BD77-35BEB5BBEC0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0095BB80-EDD2-4DEC-BD77-35BEB5BBEC0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0095BB80-EDD2-4DEC-BD77-35BEB5BBEC0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

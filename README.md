@@ -80,7 +80,7 @@ module Client =
     // Function to acquire a lock using the Web Locks API
     let acquireLock () =
         promise {
-            let locks = As<Navigator>(JS.Window.Navigator).Locks
+            let locks = JS.Window.Navigator.Locks
             do! locks.Request("my-lock", fun _ ->
                 promise {
                     // Update UI to indicate the lock has been acquired
