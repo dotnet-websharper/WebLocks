@@ -1,0 +1,22 @@
+type file
+id WebSharper.WebLocks
+authors
+    IntelliFactory
+owners
+    IntelliFactory
+repositoryType git
+repositoryUrl https://github.com/dotnet-websharper/weblocks/
+licenseUrl https://github.com/dotnet-websharper/weblocks/blob/master/LICENSE.md
+iconUrl https://github.com/dotnet-websharper/core/raw/websharper50/tools/WebSharper.png
+projectUrl https://github.com/dotnet-websharper/weblocks
+description
+    WebSharper bindings for the WebLocks API
+tags
+    Web JavaScript F# C#
+files
+    ../WebSharper.WebLocks/bin/Release/netstandard2.0/WebSharper.WebLocks.dll ==> lib/netstandard2.0
+    ../WebSharper.WebLocks/bin/Release/netstandard2.0/WebSharper.WebLocks.xml ==> lib/netstandard2.0
+    ../WebSharper.WebLocks.Extensions/bin/Release/netstandard2.0/WebSharper.WebLocks.Extensions.dll ==> lib/netstandard2.0
+    ../WebSharper.WebLocks.Extensions/bin/Release/netstandard2.0/WebSharper.WebLocks.Extensions.xml ==> lib/netstandard2.0
+dependencies
+        WebSharper ~> LOCKEDVERSION:[3]

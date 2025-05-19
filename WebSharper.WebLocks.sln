@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{42E11F35-F790-42AB-9D08-A16CD633E2E8}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WebSharper.WebLocks", "WebSharper.WebLocks\WebSharper.WebLocks.fsproj", "{B301CD3F-4FAA-4560-A58D-AF3BD751DE5E}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WebSharper.WebLocks.Sample", "WebSharper.WebLocks.Sample\WebSharper.WebLocks.Sample.fsproj", "{BDA0CA3C-E4A3-42F2-B7B6-BC19EA138F4F}"
